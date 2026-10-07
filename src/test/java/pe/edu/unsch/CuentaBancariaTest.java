@@ -8,6 +8,7 @@ public class CuentaBancariaTest {
 
     @Test
     void depositoDebeIncrementarSaldo() {
+
         CuentaBancaria cuenta = new CuentaBancaria(100);
 
         cuenta.depositar(50);
