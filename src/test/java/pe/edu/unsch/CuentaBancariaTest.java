@@ -12,6 +12,6 @@ public class CuentaBancariaTest {
 
         cuenta.depositar(50);
 
-        assertEquals(200, cuenta.obtenerSaldo());
+        assertEquals(150, cuenta.obtenerSaldo());
     }
 }
