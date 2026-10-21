@@ -1,3 +1,4 @@
+
 package pe.edu.unsch;
 
 public class CuentaBancaria {
@@ -9,16 +10,30 @@ public class CuentaBancaria {
     }
 
     public void depositar(double monto) {
-        saldo += monto;
+        if (monto > 0) {
+            saldo += monto;
+        }
+    }
+
+    public void retirar(double monto) {
+        if (monto > 0 && monto <= saldo) {
+            saldo -= monto;
+        }
     }
 
     public double obtenerSaldo() {
         return saldo;
     }
 
-    public void retirar(double monto) {
-        if (monto <= saldo) {
+    public double getSaldo() {
+        return saldo;
+    }
+    public boolean pagarServicio(double monto) {
+        if (monto > 0 && monto <= saldo) {
             saldo -= monto;
+            return true;
         }
+
+        return false;
     }
 }
